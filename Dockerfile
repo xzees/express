@@ -2,11 +2,11 @@ FROM node:13.0.1-alpine
 
 WORKDIR /
 
-COPY . .
+COPY ./src .
 
 RUN npm install --production 
 # && npm run build
 
-EXPOSE 5000
+EXPOSE 3000
 
 CMD ["npm", "run", "start"]
